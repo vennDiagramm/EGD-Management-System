@@ -114,8 +114,7 @@ public class BoardersPanel extends JPanel {
         //Picture Panel
     
         picture = new JLabel();     
-        pic = new ImageIcon(getClass().getResource("Resources/ads.png"));
-
+        pic = new ImageIcon("ads.png");
         
         picture.setIcon(pic);
         picture.setPreferredSize(new Dimension(430, 260));
