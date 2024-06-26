@@ -15,11 +15,13 @@ public class LoginMain extends JFrame {
     private JLabel logo;// logo label
     private ImageIcon imageLogo;
     private String username = "admin";
-    private String userpass = "password123";
+    private String userpass = "bastegwapo123";
 
 
     public LoginMain() {
         createUIComponents(); // Initialize UI components
+        setIconImage(new ImageIcon(getClass().getResource("logo.png")).getImage());
+
 
         // Action listener for login button
         loginButton.addActionListener(new ActionListener() {
@@ -47,7 +49,7 @@ public class LoginMain extends JFrame {
 
         // Check if username and password match expected values
         if (username.equals(user) && userpass.equals(password)) {
-            System.out.println("Login successful, opening MainMenu...");
+            JOptionPane.showMessageDialog(this,"Login successful...");
             dispose(); // Dispose the current login frame
             MainMenu mainMenu = new MainMenu(); // Open the main menu
             mainMenu.setVisible(true);
@@ -66,10 +68,11 @@ public class LoginMain extends JFrame {
 
         // Initialize logo label and set icon
         logo = new JLabel();
-        imageLogo = new ImageIcon(getClass().getResource("Resources/logo.png"));
+        imageLogo = new ImageIcon("logo.png");
 
         logo.setIcon(imageLogo);
         logo.setPreferredSize(new Dimension(130, 100)); // Adjust size as needed
+
 
         // Username label and text field
         User = new JLabel("Username:");
