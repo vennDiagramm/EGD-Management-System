@@ -5,7 +5,7 @@ import java.awt.event.WindowEvent;
 
 
 public class MainMenu extends JFrame {
-    private static final String DATA_FILE = "Resources/dorm_data.txt"; // Name of the file where dorm data is stored
+    private static final String DATA_FILE = "dorm_data.txt"; // Name of the file where dorm data is stored
     private DormManager dormManager; // Instance of DormManager to handle dorm operations
 
 
@@ -13,6 +13,8 @@ public class MainMenu extends JFrame {
         dormManager = new DormManager(); // Initialize the DormManager
         dormManager.loadData(DATA_FILE); // Load the dorm data from the file
         initComponents(); // Initialize the GUI components
+        setIconImage(new ImageIcon(getClass().getResource("logo.png")).getImage());
+
     }
 
 
