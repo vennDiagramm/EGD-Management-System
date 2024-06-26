@@ -1,8 +1,12 @@
 // Import necessary classes for reading and writing files, and managing ArrayLists
-
-import javax.swing.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import javax.swing.JOptionPane; // Import JOptionPane for displaying dialog boxes
+
 
 public class DormManager {
     private ArrayList<Room> rooms;
@@ -306,7 +310,7 @@ public class DormManager {
                     String name = boarderData[0];
                     String id = boarderData[1];
                     String contactInfo = boarderData[2];
-                    String roomNumberStr = boarderData[3];
+                    String roomNumberStr = boarderData[3]; 
                     Room assignedRoom = roomNumberStr.equals("null") ? null : findRoomByNumber(Integer.parseInt(roomNumberStr));
                     boarders.add(new Boarder(name, id, contactInfo, assignedRoom));
                 }
