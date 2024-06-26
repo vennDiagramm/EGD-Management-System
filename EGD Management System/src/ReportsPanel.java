@@ -38,7 +38,7 @@ public class ReportsPanel extends JPanel {
         //Picture Panel
     
         picture1 = new JLabel();
-        pic = new ImageIcon(getClass().getResource("Resources/ads.png"));
+        pic = new ImageIcon("ads.png");
 
         picture1.setIcon(pic);
         picture1.setPreferredSize(new Dimension(400, 250));
